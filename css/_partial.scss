@@ -5,3 +5,25 @@ $btn-color: #D17F44;
 $btn-text: #ffffff;
 $btn-hover: #B36631;
 $font: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@mixin flex($justify: center, $align: center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin btn($btn-padding: 0.8em 1em){
+    background-color: $btn-color;
+    padding: $btn-padding;
+    border-radius: 1em;
+    color: $btn-text;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+@mixin btn-hover{
+    background-color: $btn-hover;
+    transition: 0.3s ease-in-out;
+}
