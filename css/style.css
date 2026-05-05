@@ -1,1 +1,7 @@
-/*# sourceMappingURL=style.css.map */
+/*Variabler*/
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #082334;
+}/*# sourceMappingURL=style.css.map */
