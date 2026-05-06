@@ -19,16 +19,15 @@ nav a {
 .scenario {
   background: white;
   border-radius: 1em;
-  display: block;
-  justify-content: center;
   text-align: center;
-  padding: 1em 1em;
-  margin: 4em 4em;
+  padding: 1em;
+  margin: 1em;
 }
 
 .btn {
   background-color: #D17F44;
   padding: 0.8em 1em;
+  margin: 1em;
   border-radius: 1em;
   color: #ffffff;
   border: none;
@@ -41,8 +40,18 @@ nav a {
   transition: 0.3s ease-in-out;
 }
 
-/*
-.email-img{
-   background-image: url(../img/phishing-email.png);
-   @include partial.flex;
-} virker ikke obs. *//*# sourceMappingURL=style.css.map */
+.img-scenario {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .img-scenario {
+    max-width: 500px;
+  }
+}
+@media (min-width: 1024px) {
+  .img-scenario {
+    max-width: 800px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -21,11 +21,9 @@ nav{
 .scenario{
     background: white;
     border-radius: 1em;
-    display: block;
-    justify-content: center;
     text-align: center;
-    padding: 1em 1em;
-    margin: 4em 4em;
+    padding: 1em;
+    margin: 1em;
 }
 
 .btn{
@@ -34,8 +32,20 @@ nav{
         @include partial.btn-hover;
     }
 }
-/*
-.email-img{
-   background-image: url(../img/phishing-email.png);
-   @include partial.flex;
-} virker ikke obs. */
+
+.img-scenario{
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px){
+    .img-scenario{
+        max-width: 500px;
+    }
+}
+
+@media (min-width:1024px){
+    .img-scenario{
+        max-width: 800px;
+    }
+}

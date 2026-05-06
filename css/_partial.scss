@@ -15,6 +15,7 @@ $font: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-
 @mixin btn($btn-padding: 0.8em 1em){
     background-color: $btn-color;
     padding: $btn-padding;
+    margin: 1em;
     border-radius: 1em;
     color: $btn-text;
     border: none;
