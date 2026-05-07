@@ -23,9 +23,6 @@ const updateUI = (h2Text, pText, btnsText, imgPath, passwordFields) => {
   p.textContent = pText;
   section.append(p);
 
-  //const span = document.createElement("span");
-  // section.append(span)
-
   if (passwordFields) {
     const oldInput = document.createElement("input");
     oldInput.type = "password";
@@ -60,7 +57,7 @@ const nextScenario = (e) => {
       h2Text = "Du har modtaget denne email";
       pText = "Du har tre valgmuligheder. Hvad vælger du?";
       imgPath = "img/phishing-mail.png";
-      btnsText = ["Skift adgangskode", "Ignorer emailen", "Slet email"];
+      btnsText = ["Skift adgangskode", "Ignorer mail", "Slet email"];
       break;
     case "Skift adgangskode":
       h2Text = "Skift adgangskode";
@@ -70,17 +67,33 @@ const nextScenario = (e) => {
       passwordFields = true;
       break;
     case "Gem":
-      h2Text = "DU ER BLEVET HACKET";
-      pText = "Du indtastede dine oplygninger på en falsk side";
-      imgPath = "img/du-er-blevet-hacket1.png";
+      pText =
+        "Du indtastede dine oplysninger på en falsk side. Husk altid at tjekke afsenderens mailadresse. I dette tilfælde var mailen fra iba.@iba.clk. IBA vil altid sende mails fra iba@iba.dk, altså uden punktum og c l k, som godt kan ligne d k ved første øjekast. Tryk aldrig på links i mails, hvor du ikke kender afsenderen, da svindlere kan vedhæfte falske links, der lukker virus ind på din computer, anden enhed eller en virksomheds IT-systemer. Obs. Der er ingen database tilknyttet dette scenarie, så der er ikke nogen, der har fået adgang til dine koder, du har indtastet.";
+      imgPath = "img/du-er-blevet-hacket-hvidbg.png";
       btnsText = ["Start forfra"];
       break;
-    case "Ignorer emailen":
-      h2Text = "Der skete ingen ting";
+    case "Ignorer mail":
+      h2Text = "Du valgte at ignorere mailen";
+      pText =
+        "Det er helt okay at ignorere mailen, men det vil være mest fornuftigt at slette mailen, så du ikke ved et uheld kommer til at åbne mailen og klikke på linket, hvis den ligger i din indbakke.";
       btnsText = ["Start forfra"];
       break;
     case "Slet email":
-      h2Text = "Der skete ingen ting";
+      h2Text = "Du slettede mailen";
+      pText = "Ønsker du at blokere og rapportere afsenderen?";
+      btnsText = ["Ja", "Nej"];
+      break;
+    case "Ja":
+      h2Text = "Du valgte at slette mailen og blokere afsenderen";
+      pText =
+        "Det er det mest sikre valg, når du modtager en mail, som virker mistænkelig. Ved at blokere og rapportere afsenderen begrænser du risikoen for at modtage lignende mails fra samme afsender. Samtidig bliver IBA informeret om, at en phishingmail er i omløb, så de kan advare de studerende.";
+      btnsText = ["Start forfra"];
+      break;
+    case "Nej":
+      h2Text =
+        "Du slettede mailen, men afsenderen blev ikke blokeret og rapporteret";
+      pText =
+        "Det er godt, at du slettede mailen, men ved også at blokere og rapportere afsenderen får du ekstra beskyttelse, så du ikke i fremtiden vil modtage lignende mails fra afsenderen. Ved rapportering bliver IBA samtidig informeret om, at der er en phishingmail i omløb, så de kan advare de studerende.";
       btnsText = ["Start forfra"];
       break;
     case "Start forfra":
