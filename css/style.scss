@@ -1,44 +1,45 @@
 @use 'partial';
 
-body{
+body {
     box-sizing: border-box;
     margin: 0;
     font-family: partial.$font;
     background-color: partial.$bg-color;
 }
 
-nav{
+nav {
     height: 1em;
     padding: 1em;
     display: flex;
     justify-content: flex-end;
+    
     a{
         cursor: pointer;
     }
     
 }
 
-.scenario{
+.scenario {
     background: white;
     border-radius: 1em;
     text-align: center;
     padding: 1em;
     margin: 1em;
-}
 
-.btn{
+    .btn {
     @include partial.btn;
     &:hover{
         @include partial.btn-hover;
+        }
     }
 }
 
-.img-scenario{
+.img-scenario {
     width: 100%;
     height: auto;
 }
 
-input{
+input {
     width: 100%;
     padding: 1em;
     margin: 1em 0;
@@ -47,18 +48,13 @@ input{
     box-sizing: border-box;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     .img-scenario{
         max-width: 600px;
     }
-
-    .btn{
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
-@media (min-width:1024px){
+@media (min-width:1024px) {
     .img-scenario{
         max-width: 800px;
     }

@@ -68,7 +68,7 @@ const nextScenario = (e) => {
       break;
     case "Gem":
       pText =
-        "Du indtastede dine oplysninger på en falsk side. Husk altid at tjekke afsenderens mailadresse. I dette tilfælde var mailen fra iba.@iba.clk. IBA vil altid sende mails fra iba@iba.dk, altså uden punktum og c l k, som godt kan ligne d k ved første øjekast. Tryk aldrig på links i mails, hvor du ikke kender afsenderen, da svindlere kan vedhæfte falske links, der lukker virus ind på din computer, anden enhed eller en virksomheds IT-systemer. Obs. Der er ingen database tilknyttet dette scenarie, så der er ikke nogen, der har fået adgang til dine koder, du har indtastet.";
+        "Du indtastede dine oplysninger på en falsk side. Husk altid at tjekke afsenderens mailadresse. I dette tilfælde var mailen fra iba.@iba.clk. IBA vil altid sende mails fra iba@iba.dk, altså uden punktum og 'clk', som godt kan ligne 'dk' ved første øjekast. Tryk aldrig på links i mails, hvor du ikke kender afsenderen, da svindlere kan vedhæfte falske links, der lukker virus ind på din computer, anden enhed eller en virksomheds IT-systemer. Obs. Der er ingen database tilknyttet dette scenarie, så der er ikke nogen, der har fået adgang til dine koder, du har indtastet.";
       imgPath = "img/du-er-blevet-hacket-hvidbg.png";
       btnsText = ["Start forfra"];
       break;
